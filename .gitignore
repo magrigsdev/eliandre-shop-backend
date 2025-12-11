@@ -1,0 +1,83 @@
+# ----------------------------------------------------------------------
+# FICHIERS DE LOGIQUE ET DE BUILD (npm, Yarn, etc.)
+# ----------------------------------------------------------------------
+
+# Dossier des dépendances installées (le plus important !)
+/node_modules
+/jspm_packages/
+
+# Fichiers de Lock des paquets (généralement non nécessaires si vous utilisez npm/yarn)
+# Cependant, vous pouvez choisir de les commiter si vous voulez garantir une dépendance exacte.
+# npm-shrinkwrap.json
+# package-lock.json
+
+# Logs d'erreurs NPM
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Build artifacts
+/dist
+/build
+/out
+/es
+/coverage
+
+# ----------------------------------------------------------------------
+# FICHIERS CACHÉS ET TEMPORAIRES (Système d'exploitation)
+# ----------------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+.env
+.env.*
+.history
+
+# ----------------------------------------------------------------------
+# FICHIERS DES ÉDITEURS DE CODE ET IDEs (pour l'environnement de développement)
+# ----------------------------------------------------------------------
+
+# Visual Studio Code (VS Code)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# IntelliJ / WebStorm / PhpStorm
+.idea
+*.iml
+
+# Autres IDEs/Éditeurs
+*.sublime-project
+*.sublime-workspace
+*.swp
+
+# ----------------------------------------------------------------------
+# FICHIERS DE DONNÉES ET SECRETS
+# ----------------------------------------------------------------------
+
+# Fichiers de configuration sensibles ou variables d'environnement
+# C'est CRUCIAL si vous utilisez des API Keys ou des secrets.
+.env
+.env.development
+.env.production
+.env.local
+.local.env
+
+# Clés
+*.pem
+*.key
+
+# Fichiers de base de données temporaires ou locaux
+*.sqlite
+*.db
+
+# ----------------------------------------------------------------------
+# FICHIERS GÉNÉRÉS PAR TYPESCRIPT / COFFEE
+# ----------------------------------------------------------------------
+
+# JavaScript compilé à partir de TypeScript
+*.js.map
+/tsbuildinfo
