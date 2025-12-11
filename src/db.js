@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 //connection à la base de donnée
 const connectDB = async () => {
     try{
-        await mongoose.connect('mongodb://localhost:27017/instadb');
+        await mongoose.connect('mongodb://localhost:27017/eliandreShop');
         // await mongoose.connect('mongodb://localhost:27017/local');
     console.log(' connecté à MongoDB') // message de success
     }
