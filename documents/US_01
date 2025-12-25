@@ -1,0 +1,30 @@
+US_01 : Création de compte utilisateur
+
+Description
+    Etant que utilisateur visiteur non authentifé,
+    je veux pouvoir créér un compte via un formulaire
+    afin d'accder aux service du site web
+
+Critères d'acceptation(AC)
+
+
+    -Validation des données: l'API doit retourner une erreur 400 si l'email est mal formé.
+     (à supprmé plutard car le front peut bien vérifé si l'mail est bon oui pas).
+
+    -Validation des données: l'API doit retourner une erreur 400 si le mot de passe ne respect pas les standard de sécurité.
+    (à supprmé plutard car le front peut bien vérifé si l'mail est bon oui pas)
+
+
+            (se scenario appartien au front)
+            Scenario 0: Echec d'inscription l'email est mal formé (AC 400)
+            Given l'endpoint de creation de compte est disponible
+            When j'envoie une requête avec un email mal formé
+            Then le system doit retourné un code d'erreur (400)
+            And le message d'erreur doit être formé "l'Email est mal formé"
+
+            (se scenario appartien au front)
+            Scénario 0: Echec d'inscription mot de passe non sécurité (AC 400)
+            Given l'endpoint de creation de compte est disponible
+            When j'envoie une requête avec un un mot de passe non sécurisé
+            Then le system doit retourné un code d'erreur (400)
+            And le message d'erreur  "mot de passe trop faible".
