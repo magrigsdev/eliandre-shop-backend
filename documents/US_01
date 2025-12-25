@@ -1,0 +1,8 @@
+US_01 : Création de compte utilisateur
+
+Description
+    Etant que utilisateur visiteur non authentifé,
+    je veux pouvoir créér un compte via un formulaire
+    afin d'accder aux service du site web
+
+Critères d'acceptation(AC)
