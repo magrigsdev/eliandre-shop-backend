@@ -1,5 +1,3 @@
-
-
 const express = require('express'); //appel le framework
 const router = express.Router(); // recupère les routes du frameworks
 const listSacs = require('../models/sacs'); //recupère le model
