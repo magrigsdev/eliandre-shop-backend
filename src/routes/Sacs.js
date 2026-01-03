@@ -4,8 +4,9 @@ const listSacs = require('../models/sacs'); //recupère le model
 
 //get:
 router.get('/', async (req, res) => {
-    console.log("test sacs ...")
+    console.log("get sacs loading ...")
     try {
+        console.log("get sacs aalomost ready ...")
         const sacs = await listSacs.find();
         res.json(sacs);//renvoie la liste des produits
     }
