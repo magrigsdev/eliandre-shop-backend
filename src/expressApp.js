@@ -1,17 +1,23 @@
 const express = require('express'); // import express : frameword server
-const cors = require('cors'); //definir les droits
-const UsersRoutes = require('./routes/Users.js')// definition de route 
+const cors = require('cors'); //definir les droits 
 const SacsRoutes = require('./routes/Sacs.js');// definition de route 
 
-//
 
+
+// definition de route
+//const { default: mongoose } = require('mongoose');
+
+//
 const app = express(); //appelle le framework
 app.use(cors()); // utilise les droits
 app.use(express.json()); // utilse le format de fichier à fretourné .json
 
-app.use('/api/users', UsersRoutes);
-app.use('/api/sacs', SacsRoutes);
 
+app.use('/api/sacs', SacsRoutes);
+//app.use("/api/test-db", health);
+
+// backend with controller
+app.use("/api/users", require("../src/routes/user.route.js"));
 
 
 module.exports = app
