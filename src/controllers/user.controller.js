@@ -15,6 +15,7 @@ const bcrypt = require('bcrypt');
 
 //created user
 exports.createUser = async (req, res) => {
+        Image = 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg'
         try {
             const {Email, Password, Nom, Prenom, Telephone, Image } = req.body
             //= await user.create(req.body)
@@ -22,7 +23,13 @@ exports.createUser = async (req, res) => {
     
             //verifie si l'email existe déjà
             const existUser = await user.findOne({Email: Email})
-            if(existUser) return res.status(401).json({error: 'user existe déjà'})
+            if(existUser){
+                console.log('email exist',res)
+                return res.status(409).json({
+                    error: "email exists in database ",
+                    code : 'USER_ALREADY_EXISTS'
+                })
+            } 
             
             // hacher le mot de passe
             const hashedPassword = await bcrypt.hash(Password, 10)
